@@ -286,6 +286,26 @@ Song.create(name: "Fall Back", album: kingdom_come, artist: for_king_and_country
 Song.create(name: "Middle Of The Fire", album: kingdom_come, artist: for_king_and_country)
 Song.create(name: "Desert Bloom", album: kingdom_come, artist: for_king_and_country)
 
+Top10.create(name: "Blinding Lights", artist: "The Weeknd", image: "https://i.ytimg.com/vi/fHI8X4OXluQ/maxresdefault.jpg")
+Top10.create(name: "Perfect", artist: "Ed Sheeran", image: "https://i.ytimg.com/vi/2Vv-BfVoq4g/hqdefault.jpg")
+Top10.create(name: "Levitating", artist: "Dua Lipa", image: "https://i.ytimg.com/vi/TUVcZfQe-Kw/sddefault.jpg")
+Top10.create(name: "Cardigan", artist: "Taylor Swift", image: "https://i.ytimg.com/vi/K-a8s8OLBSE/maxresdefault.jpg")
+Top10.create(name: "Woman", artist: "Doja Cat", image: "https://i.ytimg.com/vi/yxW5yuzVi8w/maxresdefault.jpg")
+Top10.create(name: "Shallow", artist: "Lady Gaga", image: "https://i.ytimg.com/vi/JPJjwHAIny4/maxresdefault.jpg")
+Top10.create(name: "Bad Guy", artist: "Billie Eilish", image: "https://i1.sndcdn.com/artworks-000584234423-y1fg41-t500x500.jpg")
+Top10.create(name: "2002", artist: "Anne Marrie", image: "https://i.ytimg.com/vi/Il-an3K9pjg/hqdefault.jpg")
+Top10.create(name: "Out Of Time", artist: "The Weeknd", image: "https://i.ytimg.com/vi/2yqYAsUpdSc/maxresdefault.jpg")
+Top10.create(name: "Good Days", artist: "SZA", image: "https://i.ytimg.com/vi/2p3zZoraK9g/maxresdefault.jpg")
 
+Trending.create(name: "AI", artist: "Drake", image: "https://i.ytimg.com/vi/5_v9HB-fQAA/maxresdefault.jpg")
+Trending.create(name: "Cuff It", artist: "Beyonce", image: "https://i.ytimg.com/vi/SjqmSPZhF3s/sddefault.jpg")
+Trending.create(name: "Psychic", artist: "Chris Brown", image: "https://i.ytimg.com/vi/CtuFaOqiots/maxresdefault.jpg?v=63f04820")
+Trending.create(name: "As It Was", artist: "Harry Styles", image: "https://i.ytimg.com/vi/H5v3kku4y6Q/maxresdefault.jpg")
+Trending.create(name: "Anti-Hero", artist: "Taylor Swift", image: "https://i.ytimg.com/vi/b1kbLwvqugk/maxresdefault.jpg")
+Trending.create(name: "People", artist: "Labianca", image: "https://i.ytimg.com/vi/rJWdfDPZ9Ck/maxresdefault.jpg")
+Trending.create(name: "All My Life", artist: "J. Cole", image: "https://i.ytimg.com/vi/Z4N8lzKNfy4/maxresdefault.jpg")
+Trending.create(name: "Chemical", artist: "Post Malone", image: "https://i.ytimg.com/vi/IzPQ_jA00bk/maxresdefault.jpg")
+Trending.create(name: "Eyes Closed", artist: "Ed Sheeran", image: "https://i.ytimg.com/vi/u6wOyMUs74I/maxresdefault.jpg")
+Trending.create(name: "Snooze", artist: "CZA", image: "https://i.ytimg.com/vi/bs0qR3-7lIY/maxresdefault.jpg")
 
 puts "......................... done seeding."
