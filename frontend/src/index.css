@@ -1,0 +1,84 @@
+body{
+    background-color: black;
+    color: aliceblue;
+}
+.side-navbar{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: auto;
+    position: fixed;
+    margin-left: 0px;
+    width: 250px;
+    background-color: black;
+    height: 100%;
+    padding-top: 40px;
+}
+.sidebar-music{
+    display: flex;
+    flex-direction: column;
+
+}
+.side-navbar  a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 17px;
+    margin: 10px;
+}
+.side-navbar  a:hover{
+    color: aqua;
+}
+.side-container{
+    margin-top: 20px;
+}
+.main-content{
+    margin-left: 250px;
+    padding-top: 40px;
+}
+
+.artists-display, .albums-display, .top10-display, .trending-display, .favorites-display, .playlist-display{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    text-align: center;
+    width: 90%
+}
+
+.artist-card, .album-card, .top10-card, .trending-card, .favorite-card, .playlist-card{
+    margin: 15px;
+    width: 30%;
+    background-color: black;
+    color: white;
+}
+.artist-card:hover, .album-card:hover, .top10-card:hover, .trending-card:hover, .favorite-card:hover, .playlist-card:hover{
+    font-size: 50px;
+    background-color: darkslategrey;
+}
+.artist-card > img{
+    height: 70%;
+    border-radius: 50%;   
+}
+.album-display{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.album-song{
+    left: 0;
+    padding-left: 0;
+    margin: 60px;
+    margin-left: 0px;
+    padding-top: 20px;
+}
+.album-songs{
+    padding-left: 0;
+}
+li{
+    padding-left: 0;
+}
+.component-container{
+    text-align: center;
+}
