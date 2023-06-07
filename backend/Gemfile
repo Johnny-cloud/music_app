@@ -16,6 +16,10 @@ gem "sinatra-activerecord"
 # https://github.com/rack/rack-contrib
 gem "rack-contrib", "~> 2.3"
 
+# More Rack middleware! Used to handle CORS requests
+# https://github.com/cyu/rack-cors
+gem "rack-cors", "~> 1.1"
+
 # Run common tasks from the command line
 # https://github.com/ruby/rake
 gem "rake"
