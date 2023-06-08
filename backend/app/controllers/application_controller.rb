@@ -45,4 +45,18 @@ class ApplicationController < Sinatra::Base
     get '/recommended' do
         Recommended.all.to_json
     end
+
+    get '/reviews' do 
+        Review.all.to_json
+    end
+
+    post '/reviews' do 
+        new_review = Review.create(title: params[:title], album: params[:album])
+        new_review.to_json
+    end
+
+    delete '/reviews/:id' do 
+        Review.delete(params[:id])
+        "Review was successfully deleted!".to_json
+    end
 end

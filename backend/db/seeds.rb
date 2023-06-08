@@ -352,4 +352,8 @@ ChillHit.create(name: "Lost",artist: "Maroon 5", image: "https://i.ytimg.com/vi/
 ChillHit.create(name: "Slide Away",artist: "Miley Cyrus", image: "https://i.ytimg.com/vi/rrvFv6j3-sM/maxresdefault.jpg")
 ChillHit.create(name: "Positions",artist: "Ariana Grande", image: "https://i.ytimg.com/vi/tcYodQoapMg/maxresdefault.jpg")
 
+Review.create(title: "Great music", album: "The Garden")
+Review.create(title: "Great music", album: "Thriller")
+Review.create(title: "Ages like wine", album: "Bad")
+
 puts "......................... done seeding."
