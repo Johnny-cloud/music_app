@@ -20,6 +20,7 @@ const Navbar = () => {
           <div className='sidebar-music'>
             <Link to="my-playlist"><i class="bi bi-music-note-list"></i> My Playlist</Link>
             <Link to="favorites"><span class="bi bi-hand-thumbs-up-fill"></span> Favorites</Link>
+            <Link to="/reviews"><i class="bi bi-star"></i> Reviews</Link>
           </div>
         </div>
         <div className='side-container'>

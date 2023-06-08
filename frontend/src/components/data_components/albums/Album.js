@@ -13,7 +13,7 @@ const Album = ({album, setAlbumDisplay}) => {
     <Card style={{width: '18rem'}} className='card' onClick={handleClick}>
       <Card.Img variant='top' src={album.image}/>
       <Card.Body>
-        <h3>{album.name}</h3>
+        <h4>{album.name}</h4>
       </Card.Body>
     </Card>
     

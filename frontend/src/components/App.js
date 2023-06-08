@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Route, Routes} from "react-router-dom"
 
-import { Artists, Albums, Top10s, Trendings , Favorites, Playlist, Recommended, Home} from './data_components'
+import { Artists, Albums, Top10s, Trendings , Favorites, Playlist, Recommended, Home, Reviews} from './data_components'
 import { Navbar} from './essentials'
 import ArtistAlbums from './essentials/ArtistAlbums'
 import AlbumDisplay from './album_display/AlbumDisplay'
@@ -20,6 +20,7 @@ function App() {
   const [chillHits, setChillHits] = useState([])
   const [todayHits, setTodayHits] = useState([])
   const [megaHits, setMegaHits] = useState([])
+  const [reviews, setReviews] = useState([])
 
   useEffect(
     () => {
@@ -81,6 +82,14 @@ function App() {
     }, []
   )
 
+  useEffect(
+    () => {
+      fetch("http://localhost:9292/reviews")
+      .then(res => res.json())
+      .then(data => setReviews([...data]))
+    }, [reviews.length]
+  )
+
 
   return (
     <div>
@@ -96,7 +105,8 @@ function App() {
           <Route exact path="/my-playlist" element={<Playlist songs={playlist} setPlaylist={setPlaylist} playlist={playlist}/>} />
           <Route exact path='/favorites' element={<Favorites songs={favorites} setFavorites={setFavorites} favorites={favorites}/>}/>
           <Route exact path="/recommended" element={<Recommended recommended={recommended} chillHits={chillHits} setPlaylist={setPlaylist} setFavorites={setFavorites} playlist={playlist} favorites={favorites}/>}/>
-          <Route exact path="/albumdisplay" element={<AlbumDisplay album = {albumDisplay} setPlaylist={setPlaylist} setFavorites={setFavorites} playlist={playlist} favorites={favorites}/>}/>
+          <Route exact path="/albumdisplay" element={<AlbumDisplay setReviews = {setReviews} album = {albumDisplay} setPlaylist={setPlaylist} setFavorites={setFavorites} playlist={playlist} favorites={favorites}/>}/>
+          <Route exact path="/reviews" element={<Reviews reviews={reviews} setReviews={setReviews}/>}/>
         </Routes>
       </div>
 

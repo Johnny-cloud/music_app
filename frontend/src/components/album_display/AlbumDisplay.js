@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import AlbumHead from './AlbumHead'
 import AlbumSongs from './AlbumSongs'
 
-const AlbumDisplay = ({album}) => {
+
+const AlbumDisplay = ({album, setReviews}) => {
   const [songs, setSongs] = useState([])
 
   useEffect(
@@ -12,11 +13,17 @@ const AlbumDisplay = ({album}) => {
       .then(data => setSongs(data))
     },[album]
   )
+
+  
+
   return (
-    <div className='album-display'>
-        <AlbumHead album = {album}/>
-        <AlbumSongs songs = {songs}/>
+    <div>
+        <div className='display'>
+              <AlbumHead album = {album} />
+              <AlbumSongs songs = {songs} album={album} setReviews={setReviews}/>
+        </div>
     </div>
+    
   )
 }
 
