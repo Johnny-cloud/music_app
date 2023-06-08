@@ -20,17 +20,26 @@ This project requires you to split your terminal into two or use two different t
     *one for the frontend
     *one for the backend
 
-1. Fork and clone the project to your local machine.
+* 1. Fork and clone the project to your local machine.
 
-**Run the backend**
-NB: Make sure Ruby is installed
-2. On the first terminal cd into the backend project folder i.e (cd music_app/backend)
-3. Run **bundle install** to install the Gemfile dependecies
-4. Run **bundle exec rake server** to start up the backend server
-Note: The frontend fetches from port 9292 of the localhost (localhost:9292)
+* **Run the backend**
 
-**Run the frontend**
-NB: Make sure Node is installed
-2. On the second terminal cd into the frontend project folder i.e (cd music_app/frontend)
-3. Run **npm install** to install the package.json dependecies
-4. Run **npm start** to start up the frontend server
+* NB: Make sure Ruby is installed
+
+* 2. On the first terminal cd into the backend project folder i.e (cd music_app/backend)
+
+* 3. Run **bundle install** to install the Gemfile dependecies
+
+* 4. Run **bundle exec rake server** to start up the backend server
+
+* Note: The frontend fetches from port 9292 of the localhost (localhost:9292)
+
+* **Run the frontend**
+
+* NB: Make sure Node is installed
+
+* 2. On the second terminal cd into the frontend project folder i.e (cd music_app/frontend)
+
+* 3. Run **npm install** to install the package.json dependecies
+
+* 4. Run **npm start** to start up the frontend server
