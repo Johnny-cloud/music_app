@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_06_155005) do
+ActiveRecord::Schema.define(version: 2023_06_08_063205) do
 
   create_table "albums", force: :cascade do |t|
     t.string "name"
@@ -23,10 +23,34 @@ ActiveRecord::Schema.define(version: 2023_06_06_155005) do
     t.string "image"
   end
 
+  create_table "chill_hits", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "artist"
+  end
+
+  create_table "mega_hits", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "artist"
+  end
+
+  create_table "recommendeds", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "artist"
+  end
+
   create_table "songs", force: :cascade do |t|
     t.string "name"
     t.integer "album_id"
     t.integer "artist_id"
+  end
+
+  create_table "today_hits", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "artist"
   end
 
   create_table "top10s", force: :cascade do |t|

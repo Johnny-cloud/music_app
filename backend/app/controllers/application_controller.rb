@@ -29,4 +29,20 @@ class ApplicationController < Sinatra::Base
         album = Album.find(params[:id])
         album.songs.to_json
     end
+
+    get '/todayhits' do 
+        TodayHit.all.to_json
+    end
+
+    get "/chillhits" do 
+        ChillHit.all.to_json
+    end
+
+    get '/megahits' do 
+        MegaHit.all.to_json
+    end
+
+    get '/recommended' do
+        Recommended.all.to_json
+    end
 end
