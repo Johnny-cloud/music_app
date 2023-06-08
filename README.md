@@ -17,8 +17,10 @@ It is a music web app similar to spotify.It displays the trending songs, top 10,
 ## How to run the project
 
 This project requires you to split your terminal into two or use two different terminals:
-    *one for the frontend
-    *one for the backend
+
+* one for the frontend
+
+* one for the backend
 
 * 1. Fork and clone the project to your local machine.
 
