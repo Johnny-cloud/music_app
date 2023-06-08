@@ -7,7 +7,7 @@ const FavoriteSong = ({song, favorites, setFavorites}) => {
         setFavorites(filtered_songs)
     }
   return (
-    <Card style={{width: '18rem'}} className='favorite-card'>
+    <Card style={{width: '18rem'}} className='card'>
     <Card.Img variant='top' src={song.image}/>
     <Card.Body>
       <h6>{song.name}</h6>

@@ -52,7 +52,7 @@ body{
     background-color: black;
     color: white;
 }
-.artist-card:hover, .album-card:hover, .top10-card:hover, .trending-card:hover, .favorite-card:hover, .playlist-card:hover{
+.card:hover{
     font-size: 50px;
     background-color: darkslategrey;
 }
