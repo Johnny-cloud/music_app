@@ -36,7 +36,7 @@ body{
     padding-top: 40px;
 }
 
-.artists-display, .albums-display, .top10-display, .trending-display, .favorites-display, .playlist-display{
+.display{
     padding-top: 50px;
     display: flex;
     flex-direction: row;
@@ -46,7 +46,7 @@ body{
     width: 90%
 }
 
-.artist-card, .album-card, .top10-card, .trending-card, .favorite-card, .playlist-card{
+.card{
     margin: 15px;
     width: 30%;
     background-color: black;
@@ -81,4 +81,9 @@ li{
 }
 .component-container{
     text-align: center;
+}
+.home-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

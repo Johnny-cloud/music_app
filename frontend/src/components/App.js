@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import {Route, Routes} from "react-router-dom"
 
-import { Artists, Albums, Top10s, Trendings , Favorites, Playlist, Recommended} from './data_components'
-import {Home, Navbar} from './essentials'
+import { Artists, Albums, Top10s, Trendings , Favorites, Playlist, Recommended, Home} from './data_components'
+import { Navbar} from './essentials'
 import ArtistAlbums from './essentials/ArtistAlbums'
 import AlbumDisplay from './album_display/AlbumDisplay'
 
@@ -16,6 +16,10 @@ function App() {
   const [albumDisplay, setAlbumDisplay] = useState('')
   const [playlist, setPlaylist] = useState([])
   const [favorites, setFavorites] = useState([])
+  const [recommended, setRecommended] =useState([])
+  const [chillHits, setChillHits] = useState([])
+  const [todayHits, setTodayHits] = useState([])
+  const [megaHits, setMegaHits] = useState([])
 
   useEffect(
     () => {
@@ -48,6 +52,34 @@ function App() {
       .then(data => setTrendings([...data]))
     }, []
   )
+  useEffect(
+    () => {
+      fetch("http://localhost:9292/chillhits")
+      .then(res => res.json())
+      .then(data => setChillHits([...data]))
+    }, []
+  )
+  useEffect(
+    () => {
+      fetch("http://localhost:9292/megahits")
+      .then(res => res.json())
+      .then(data => setMegaHits([...data]))
+    }, []
+  )
+  useEffect(
+    () => {
+      fetch("http://localhost:9292/recommended")
+      .then(res => res.json())
+      .then(data => setRecommended([...data]))
+    }, []
+  )
+  useEffect(
+    () => {
+      fetch("http://localhost:9292/todayhits")
+      .then(res => res.json())
+      .then(data => setTodayHits([...data]))
+    }, []
+  )
 
 
   return (
@@ -55,7 +87,7 @@ function App() {
       <Navbar />
       <div className='main-content'>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home  todayHits={todayHits} megaHits={megaHits} setPlaylist={setPlaylist} setFavorites={setFavorites} playlist={playlist} favorites={favorites} />} />
           <Route exact path="/artists" element = {<Artists artists = {artists} setAlbumArtist={setAlbumArtist}/>} />
           <Route exact path="/albums" element = {<Albums albums = {albums} setAlbumDisplay={setAlbumDisplay}/>} />
           <Route exact path="/top10s" element = {<Top10s top10s = {top10s} setPlaylist={setPlaylist} setFavorites={setFavorites} playlist={playlist} favorites={favorites}/>} />
@@ -63,8 +95,8 @@ function App() {
           <Route exact path='/artist-albums' element = {<ArtistAlbums artist = {albumArtist} setAlbumDisplay={setAlbumDisplay}/>}/>
           <Route exact path="/my-playlist" element={<Playlist songs={playlist} setPlaylist={setPlaylist} playlist={playlist}/>} />
           <Route exact path='/favorites' element={<Favorites songs={favorites} setFavorites={setFavorites} favorites={favorites}/>}/>
-          <Route exact path="/recommended" element={<Recommended />}/>
-          <Route exact path="/albumdisplay" element={<AlbumDisplay album = {albumDisplay}/>}/>
+          <Route exact path="/recommended" element={<Recommended recommended={recommended} chillHits={chillHits} setPlaylist={setPlaylist} setFavorites={setFavorites} playlist={playlist} favorites={favorites}/>}/>
+          <Route exact path="/albumdisplay" element={<AlbumDisplay album = {albumDisplay} setPlaylist={setPlaylist} setFavorites={setFavorites} playlist={playlist} favorites={favorites}/>}/>
         </Routes>
       </div>
 

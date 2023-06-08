@@ -10,7 +10,7 @@ const Album = ({album, setAlbumDisplay}) => {
     navigate("/albumdisplay")
   }
   return (
-    <Card style={{width: '18rem'}} className='album-card' onClick={handleClick}>
+    <Card style={{width: '18rem'}} className='card' onClick={handleClick}>
       <Card.Img variant='top' src={album.image}/>
       <Card.Body>
         <h3>{album.name}</h3>

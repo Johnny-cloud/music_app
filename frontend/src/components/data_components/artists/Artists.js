@@ -4,8 +4,8 @@ import Artist from "./Artist"
 const Artists = ({artists, setAlbumArtist}) => {
   return (
     <div className='component-container'>
-      <h1>Artists</h1>
-      <div className='artists-display'>
+      <h3>Meet The Artists</h3>
+      <div className='display'>
         {artists.map(artist => <Artist artist = {artist} setAlbumArtist={setAlbumArtist}/>)}
       </div>
     </div>

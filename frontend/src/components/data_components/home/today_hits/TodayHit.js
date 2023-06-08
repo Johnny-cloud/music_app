@@ -1,27 +1,26 @@
 import React from 'react'
-import {Card, Button} from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
 
-const Top10 = ({top10, setPlaylist, setFavorites, playlist, favorites}) => {
+const TodayHit = ({song, setPlaylist, setFavorites, playlist, favorites}) => {
   function handleLike(){
-    setFavorites([...favorites, top10])
+    setFavorites([...favorites, song])
     alert("Added to favorites!")
   }
   function handlePlaylist(){
-    setPlaylist([...playlist, top10])
+    setPlaylist([...playlist, song])
     alert("Added to playlist!")
   }
-
   return (
     <Card style={{width: '18rem'}} className='card'>
-      <Card.Img variant='top' src={top10.image}/>
-      <Card.Body>
-        <h6>{top10.name}</h6>
-        <Button onClick={handleLike} style={{
+    <Card.Img variant='top' src={song.image}/>
+    <Card.Body>
+      <h6>{song.name}</h6>
+      <Button onClick={handleLike} style={{
           color: 'yellow',
           backgroundColor: 'black',
           borderColor: 'yellow',
-          fontSize: '15px',
-          marginRight: '12px'
+          fontSize: '12px',
+          marginRight: '15px'
         }}>
           <span class="bi bi-hand-thumbs-up-fill"></span> 
         </Button>
@@ -31,10 +30,9 @@ const Top10 = ({top10, setPlaylist, setFavorites, playlist, favorites}) => {
           borderColor: 'white',
           fontSize: '12px'
         }}><i class="bi bi-music-note-list"></i></Button>
-      </Card.Body>
-    </Card>
-    
+    </Card.Body>
+  </Card>
   )
 }
 
-export default Top10
+export default TodayHit

@@ -8,7 +8,7 @@ const PlaySong = ({song, playlist, setPlaylist}) => {
     setPlaylist(filtered_songs)
   }
   return (
-    <Card style={{width: '18rem'}} className='playlist-card'>
+    <Card style={{width: '18rem'}} className='card'>
       <Card.Img variant='top' src={song.image}/>
       <Card.Body>
         <h6>{song.name}</h6>

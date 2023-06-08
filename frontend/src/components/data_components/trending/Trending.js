@@ -11,7 +11,7 @@ const Trending = ({trending, setPlaylist, setFavorites, playlist, favorites}) =>
     alert("Added to playlist!")
   }
   return (
-    <Card style={{width: '18rem'}} className='trending-card'>
+    <Card style={{width: '18rem'}} className='card'>
       <Card.Img variant='top' src={trending.image}/>
       <Card.Body>
         <h6>{trending.name}</h6>

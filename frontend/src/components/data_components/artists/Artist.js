@@ -15,7 +15,7 @@ const Artist = ({artist, setAlbumArtist}) => {
       <Card.Img variant='top' src={artist.image} />
       <Card.Body>
         <Card.Text>
-          <h3>{artist.name}</h3>
+          <h5>{artist.name}</h5>
         </Card.Text>
       </Card.Body>
     </Card>
