@@ -3,7 +3,7 @@ import AlbumSong from "./AlbumSong"
 import { Card } from 'react-bootstrap'
 import {  Form, Button } from 'react-bootstrap'
 
-const AlbumSongs = ({songs,album, setReviews}) => {
+const AlbumSongs = ({songs,album, reviews, setReviews}) => {
   const [formData, setFormData] = useState({
     "title": " ",
     "album": album.name
@@ -16,6 +16,7 @@ const AlbumSongs = ({songs,album, setReviews}) => {
   }
 
   function handleSubmit(){
+
     fetch("http://localhost:9292/reviews", {
       method: 'POST',
       headers:{
@@ -24,12 +25,9 @@ const AlbumSongs = ({songs,album, setReviews}) => {
       body: JSON.stringify(formData)
     })
     .then(res => res.json())
-    .then(
-      fetch("http://localhost:9292/reviews")
-      .then(res => res.json())
-      .then(data => setReviews([...data]))
-      )
+    .then(data => console.log(data))
     
+    setReviews([...reviews, formData])
 
     setFormData(
       {

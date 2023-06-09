@@ -3,7 +3,7 @@ import AlbumHead from './AlbumHead'
 import AlbumSongs from './AlbumSongs'
 
 
-const AlbumDisplay = ({album, setReviews}) => {
+const AlbumDisplay = ({album, setReviews, reviews}) => {
   const [songs, setSongs] = useState([])
 
   useEffect(
@@ -20,7 +20,7 @@ const AlbumDisplay = ({album, setReviews}) => {
     <div>
         <div className='display'>
               <AlbumHead album = {album} />
-              <AlbumSongs songs = {songs} album={album} setReviews={setReviews}/>
+              <AlbumSongs songs = {songs} album={album} reviews={reviews} setReviews={setReviews}/>
         </div>
     </div>
     

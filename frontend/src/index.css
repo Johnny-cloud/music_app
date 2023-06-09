@@ -54,7 +54,7 @@ body{
 }
 .card:hover{
     font-size: 50px;
-    background-color: darkslategrey;
+    background-color: rgb(46, 46, 45);
 }
 .artist-card > img{
     height: 70%;

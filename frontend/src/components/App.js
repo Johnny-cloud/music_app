@@ -121,7 +121,7 @@ function App() {
           <Route exact path="/my-playlist" element={<Playlist songs={playlist} setPlaylist={setPlaylist} playlist={playlist}/>} />
           <Route exact path='/favorites' element={<Favorites songs={favorites} setFavorites={setFavorites} favorites={favorites}/>}/>
           <Route exact path="/recommended" element={<Recommended recommended={recommended} chillHits={chillHits} setPlaylist={setPlaylist} setFavorites={setFavorites} playlist={playlist} favorites={favorites}/>}/>
-          <Route exact path="/albumdisplay" element={<AlbumDisplay setReviews = {setReviews} album = {albumDisplay} setPlaylist={setPlaylist} setFavorites={setFavorites} playlist={playlist} favorites={favorites}/>}/>
+          <Route exact path="/albumdisplay" element={<AlbumDisplay setReviews = {setReviews} album = {albumDisplay} reviews={reviews}/>}/>
           <Route exact path="/reviews" element={<Reviews reviews={reviews} setReviews={setReviews}/>}/>
         </Routes>
       </div>

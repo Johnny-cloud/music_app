@@ -4,19 +4,21 @@ import { Card, Button } from 'react-bootstrap';
 const Song = ({song, setPlaylist, setFavorites, playlist, favorites}) => {
     function handleLike(){
       fetch(`http://localhost:9292/favorites`,{
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          "name": song.name,
-          "image": song.image,
-          "artist": song.artist
+            method: 'POST',
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              "name": song.name,
+              "image": song.image,
+              "artist": song.artist
+            })
         })
-  }).then(res => res.json()) 
-  .then(data => console.log(data));
+        .then(res => res.json()) 
+        .then(data => console.log(data));
 
       setFavorites([...favorites, song])
+      
       alert("ADDED TO FAVORITES!")
     }
     function handlePlaylist(){
