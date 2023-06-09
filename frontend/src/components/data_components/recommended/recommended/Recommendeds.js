@@ -1,12 +1,12 @@
 import React from 'react'
-import Recommend from './Recommend'
+import Song from '../../song_display/Song'
 
 const Recommendeds = ({recommended, setPlaylist, setFavorites, playlist, favorites}) => {
   return (
     <div>
         <h4>Our Hits</h4>
         <div className='display'>
-            {recommended.map(recom => <Recommend song={recom} setPlaylist={setPlaylist} setFavorites={setFavorites} playlist={playlist} favorites={favorites}/>)}
+            {recommended.map(recom => <Song song={recom} setPlaylist={setPlaylist} setFavorites={setFavorites} playlist={playlist} favorites={favorites}/>)}
         </div>
     </div>
   )

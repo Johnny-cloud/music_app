@@ -3,8 +3,12 @@ import { Card, Button } from 'react-bootstrap'
 
 const FavoriteSong = ({song, favorites, setFavorites}) => {
     function handleRemove(){
-        let filtered_songs = favorites.filter(fav => fav !== song)
-        setFavorites(filtered_songs)
+        
+        fetch(`http://localhost:9292/favorites/${song.id}`,{
+          method: 'DELETE'
+        })  
+      let filtered_songs = favorites.filter(fav => fav !== song)
+      setFavorites(filtered_songs)
     }
   return (
     <Card style={{width: '18rem'}} className='card'>

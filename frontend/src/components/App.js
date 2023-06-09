@@ -90,6 +90,22 @@ function App() {
     }, [reviews.length]
   )
 
+  useEffect(
+    () => {
+      fetch("http://localhost:9292/playlist")
+      .then(res => res.json())
+      .then(data => setPlaylist([...data]))
+    }, [playlist.length]
+  )
+
+  useEffect(
+    () => {
+      fetch("http://localhost:9292/favorites")
+      .then(res => res.json())
+      .then(data => setFavorites([...data]))
+    }, [favorites.length]
+  )
+
 
   return (
     <div>

@@ -1,14 +1,40 @@
 import React from 'react'
-import { Card, Button } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap';
 
-const Recommend = ({song, setPlaylist, setFavorites, playlist, favorites}) => {
+const Song = ({song, setPlaylist, setFavorites, playlist, favorites}) => {
     function handleLike(){
+      fetch(`http://localhost:9292/favorites`,{
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          "name": song.name,
+          "image": song.image,
+          "artist": song.artist
+        })
+  }).then(res => res.json()) 
+  .then(data => console.log(data));
+
       setFavorites([...favorites, song])
-      alert("Added to favorites!")
+      alert("ADDED TO FAVORITES!")
     }
     function handlePlaylist(){
+      fetch(`http://localhost:9292/playlist`,{
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          "name": song.name,
+          "image": song.image,
+          "artist": song.artist
+        })
+  }).then(res => res.json()) 
+  .then(data => console.log(data));
+
       setPlaylist([...playlist, song])
-      alert("Added to playlist!")
+      alert("ADDED TO PLAYLIST!")
     }
     return (
       <Card style={{width: '18rem'}} className='card'>
@@ -35,4 +61,4 @@ const Recommend = ({song, setPlaylist, setFavorites, playlist, favorites}) => {
     )
   }
 
-export default Recommend
+export default Song

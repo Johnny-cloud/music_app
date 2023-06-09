@@ -4,6 +4,9 @@ import { Card, Button } from 'react-bootstrap'
 const PlaySong = ({song, playlist, setPlaylist}) => {
 
   function handleRemove(){
+    fetch(`http://localhost:9292/playlist/${song.id}`,{
+          method: 'DELETE'
+        }) 
     let filtered_songs = playlist.filter(play => play !== song)
     setPlaylist(filtered_songs)
   }
