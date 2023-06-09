@@ -356,4 +356,16 @@ Review.create(title: "Great music", album: "The Garden")
 Review.create(title: "Great music", album: "Thriller")
 Review.create(title: "Ages like wine", album: "Bad")
 
+Playlist.create(name: "Positions",artist: "Ariana Grande", image: "https://i.ytimg.com/vi/tcYodQoapMg/maxresdefault.jpg")
+Playlist.create(name: "Daylight",artist: "David Kushner", image: "https://i.ytimg.com/vi/MoN9ql6Yymw/maxresdefault.jpg")
+Playlist.create(name: "Sijawai",artist: "Octopizzo", image: "https://i.ytimg.com/vi/e2CzcvciDzE/maxresdefault.jpg")
+Playlist.create(name: "Golden",artist: "Harry Styles", image: "https://i.ytimg.com/vi/P3cffdsEXXw/maxresdefault.jpg")
+Playlist.create(name: "This City",artist: "Sam Fischer", image: "https://i.ytimg.com/vi/s3IAHXP1dfs/maxresdefault.jpg")
+
+Favorite.create(name: "Baikoko",artist: "Diamond Platnumz", image: "https://i.ytimg.com/vi/hGqzvvbZnyQ/maxresdefault.jpg")
+Favorite.create(name: "Happier",artist: "Marshmello", image: "https://i.ytimg.com/vi/m7Bc3pLyij0/maxresdefault.jpg")
+Favorite.create(name: "Snapchat",artist: "Ruger", image: "https://i.ytimg.com/vi/ECU44OYzfb4/maxresdefault.jpg")
+Favorite.create(name: "Willow",artist: "Taylor Swift", image: "https://i.ytimg.com/vi/RsEZmictANA/maxresdefault.jpg")
+Favorite.create(name: "This City",artist: "Sam Fischer", image: "https://i.ytimg.com/vi/s3IAHXP1dfs/maxresdefault.jpg")
+
 puts "......................... done seeding."

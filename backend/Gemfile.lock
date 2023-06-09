@@ -103,7 +103,7 @@ DEPENDENCIES
   rspec-json_expectations (~> 2.2)
   sinatra (~> 2.1)
   sinatra-activerecord
-  sqlite3 (~> 1.4)
+  sqlite3
 
 BUNDLED WITH
    2.4.13

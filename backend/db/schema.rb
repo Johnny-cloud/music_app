@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_08_152350) do
+ActiveRecord::Schema.define(version: 2023_06_09_055635) do
 
   create_table "albums", force: :cascade do |t|
     t.string "name"
@@ -29,7 +29,19 @@ ActiveRecord::Schema.define(version: 2023_06_08_152350) do
     t.string "artist"
   end
 
+  create_table "favorites", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "artist"
+  end
+
   create_table "mega_hits", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "artist"
+  end
+
+  create_table "playlists", force: :cascade do |t|
     t.string "name"
     t.string "image"
     t.string "artist"

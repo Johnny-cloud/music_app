@@ -59,4 +59,32 @@ class ApplicationController < Sinatra::Base
         Review.delete(params[:id])
         "Review was successfully deleted!".to_json
     end
+
+    get "/playlist" do 
+        Playlist.all.to_json
+    end
+
+    post '/playlist' do 
+        new_song = Playlist.create(name: params[:name], artist: params[:artist], image: params[:image])
+        new_song.to_json
+    end
+
+    delete "/playlist/:id" do 
+        Playlist.delete(params[:id])
+        "Review was successfully deleted!".to_json
+    end
+
+    get "/favorites" do 
+        Favorite.all.to_json
+    end
+
+    post '/favorites' do 
+        new_song = Favorite.create(name: params[:name], artist: params[:artist], image: params[:image])
+        new_song.to_json
+    end
+
+    delete "/favorites/:id" do 
+        Favorite.delete(params[:id])
+        "Review was successfully deleted!".to_json
+    end
 end
